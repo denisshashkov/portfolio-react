@@ -1,0 +1,85 @@
+.hero {
+  height: 100vh;
+  background: $heroBackgroundColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: $white;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  &__image {
+    background: $lightGreen;
+    box-shadow: 19px 0px 31px 6px rgba(88, 255, 245, 0.38);
+  }
+  &__photo {
+    width: 125px;
+    height: 210px;
+  }
+  &__title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__title-name {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &__title-about {
+    font-size: 19px;
+    font-weight: 300;
+  }
+  &__links {
+    display: flex;
+    gap: 12px;
+    svg {
+      width: 25px;
+      height: 25px;
+      fill: $lightGreen;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+        @include transition;
+      }
+    }
+  }
+  &__scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    position: absolute;
+    bottom: 40px;
+  }
+  &__scroll-mouse {
+    position: relative;
+    width: 21px;
+    height: 28px;
+    border: 2px solid $white;
+    @include circle;
+    cursor: pointer;
+    &:hover {
+      border-color: $lightGreen;
+      @include transition;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      @include circle;
+      background: $lightGreen;
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      @include positionCenterX;
+    }
+  }
+}

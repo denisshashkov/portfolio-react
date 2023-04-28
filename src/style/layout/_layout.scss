@@ -1,0 +1,12 @@
+.container {
+  margin: 0 auto;
+  //@include adaptive-padding(75, 20);
+  padding: 70px 75px 0px 206px;
+}
+
+.section {
+  background: $lightGrey;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}

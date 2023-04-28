@@ -1,0 +1,19 @@
+.avatar {
+  position: relative;
+  @include circle;
+  width: 162px;
+  height: 162px;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    background-image: url('../../assets/img/photo.png');
+    @include backgroundPosition;
+    width: 151px;
+    height: 200px;
+    border-radius: 20px 10px 70px 69px;
+  }
+}

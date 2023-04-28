@@ -1,0 +1,29 @@
+.progressBar {
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 8px 2px 8px;
+  }
+  &__title,
+  &__percent {
+    font-weight: 600;
+    font-size: 12px;
+  }
+  &__track {
+    height: 10px;
+    background-color: #e0d9d9;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  &__filler {
+    height: 100%;
+    border-radius: inherit;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -ms-border-radius: inherit;
+    -o-border-radius: inherit;
+  }
+}

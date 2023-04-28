@@ -1,0 +1,68 @@
+.navbar {
+  display: flex;
+  background: $heroBackgroundColor;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  width: 116px;
+
+  &__border {
+    display: flex;
+    position: absolute;
+    right: 0;
+  }
+  &__border-light {
+    width: 8px;
+    height: 100vh;
+    background: $white;
+  }
+  &__border-grey {
+    width: 8px;
+    height: 100vh;
+    background: $grey;
+  }
+  &__logo {
+    position: absolute;
+    top: 60px;
+    left: 35px;
+  }
+  &__logo-title {
+    cursor: pointer;
+    position: relative;
+    font-size: 32px;
+    font-weight: 800;
+    color: $white;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 11px;
+      height: 11px;
+      background: $red;
+      position: absolute;
+      bottom: 2px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    svg {
+      width: 38px;
+      height: 30px;
+      cursor: pointer;
+      fill: $white;
+      &:hover {
+        fill: $lightGreen;
+        @include transition;
+      }
+    }
+  }
+  &__item .active {
+    svg {
+      fill: $lightGreen;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.title {
+  font-size: 31px;
+  font-weight: 800;
+  color: $sectionTitleColor;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background: url('../../assets/img/sectionTitleImage.png');
+    width: 85px;
+    height: 85px;
+    left: -65px;
+    top: -28px;
+  }
+}
